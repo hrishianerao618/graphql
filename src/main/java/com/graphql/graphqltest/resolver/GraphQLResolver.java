@@ -1,4 +1,4 @@
-package resolver;
+package com.graphql.graphqltest.resolver;
 
 import org.springframework.stereotype.Component;
 
