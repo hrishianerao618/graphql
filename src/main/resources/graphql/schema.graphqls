@@ -3,10 +3,25 @@ type Query{
     secondGraphQuery(firstParam : String!, secondParam : String): String!
     category : Category
     sampleArr : [Int!]!
+    country(countryId : Int!) : Country!
 }
 
 type Category{
-    categoryId : String!
+    categoryId : Int!
     name: String!
     lastUpdate : String!
+}
+
+type Country{
+    countryId : Int!
+    country: String!
+    lastUpdate : String!
+    cities : [City]!
+}
+
+type City{
+    cityId : Int!
+    city: String!
+    lastUpdate : String!
+    country: Country!
 }
