@@ -1,0 +1,13 @@
+type Actor{
+    actorId : Int
+    firstName : String!
+    lastName : String
+    lastUpdate : String
+}
+
+
+input ActorInput{
+    firstName : String!
+    lastName : String
+    lastUpdate : String
+}

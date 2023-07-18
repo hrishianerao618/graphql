@@ -1,0 +1,15 @@
+type Film{
+    filmId : Int!
+    title: String!
+    description : String
+    release_year : String!
+    language_id : Int!
+    rental_duration : Int!
+    rental_rate : Float!
+    length : Int!
+    replacement_cost : Float!
+    rating : String!
+    last_update : String
+    special_features : String
+    fulltext : String!
+}

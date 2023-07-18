@@ -1,0 +1,5 @@
+type Category{
+    categoryId : Int!
+    name: String!
+    lastUpdate : String!
+}

@@ -1,0 +1,6 @@
+type Country{
+    countryId : Int!
+    country: String!
+    lastUpdate : String!
+    cities : [City]!
+}
