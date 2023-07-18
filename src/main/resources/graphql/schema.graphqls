@@ -4,7 +4,8 @@ type Query{
     category : Category
     sampleArr : [Int!]!
     country(countryId : Int!) : Country!,
-    films(pageNo : Int, size : Int) : [Film]!
+    films(pageNo : Int, size : Int) : [Film]!,
+    actor(actorId : Int!): Actor
 }
 
 type Film{
@@ -41,4 +42,22 @@ type City{
     city: String!
     lastUpdate : String!
     country: Country!
+}
+
+type Mutation{
+    createActor(actor: ActorInput!) : Actor
+}
+
+type Actor{
+    actorId : Int
+    firstName : String!
+    lastName : String
+    lastUpdate : String
+}
+
+
+input ActorInput{
+    firstName : String!
+    lastName : String
+    lastUpdate : String
 }
