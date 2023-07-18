@@ -3,7 +3,24 @@ type Query{
     secondGraphQuery(firstParam : String!, secondParam : String): String!
     category : Category
     sampleArr : [Int!]!
-    country(countryId : Int!) : Country!
+    country(countryId : Int!) : Country!,
+    films(pageNo : Int, size : Int) : [Film]!
+}
+
+type Film{
+    filmId : Int!
+    title: String!
+    description : String
+    release_year : String!
+    language_id : Int!
+    rental_duration : Int!
+    rental_rate : Float!
+    length : Int!
+    replacement_cost : Float!
+    rating : String!
+    last_update : String
+    special_features : String
+    fulltext : String!
 }
 
 type Category{
