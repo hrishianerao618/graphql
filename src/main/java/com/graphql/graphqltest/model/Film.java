@@ -1,13 +1,15 @@
 package com.graphql.graphqltest.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Generated;
+
+import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "film")
 public class Film {
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer filmId ;
     private String title;
     private String description ;
@@ -18,9 +20,8 @@ public class Film {
     private Integer length ;
     private Double replacement_cost ;
     private String rating ;
-    private String last_update ;
+    private Timestamp last_update ;
     private String special_features ;
-    private String fulltext ;
 
     public Film() {
     }
@@ -105,11 +106,11 @@ public class Film {
         this.rating = rating;
     }
 
-    public String getLast_update() {
+    public Timestamp getLast_update() {
         return last_update;
     }
 
-    public void setLast_update(String last_update) {
+    public void setLast_update(Timestamp last_update) {
         this.last_update = last_update;
     }
 
@@ -121,11 +122,4 @@ public class Film {
         this.special_features = special_features;
     }
 
-    public String getFulltext() {
-        return fulltext;
-    }
-
-    public void setFulltext(String fulltext) {
-        this.fulltext = fulltext;
-    }
 }

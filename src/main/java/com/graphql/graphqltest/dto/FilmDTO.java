@@ -13,7 +13,6 @@ public class FilmDTO {
     private String rating ;
     private String last_update ;
     private String special_features ;
-    private String fulltext ;
 
     public FilmDTO() {
     }
@@ -114,11 +113,4 @@ public class FilmDTO {
         this.special_features = special_features;
     }
 
-    public String getFulltext() {
-        return fulltext;
-    }
-
-    public void setFulltext(String fulltext) {
-        this.fulltext = fulltext;
-    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface FilmService {
     public List<FilmDTO> getALLFilms(int pageNo, int size);
+
+    FilmDTO createFilm(FilmDTO filmDTO);
 }

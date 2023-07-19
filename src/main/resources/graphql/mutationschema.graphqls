@@ -1,3 +1,4 @@
 type Mutation{
     createActor(actor: ActorInput!) : Actor
+    createFilm(film: FilmInput!): Film
 }
