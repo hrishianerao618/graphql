@@ -11,4 +11,8 @@ import java.util.List;
 
 public interface CityService {
     public List<CityDTO> getAllCitiesByCountryId(CountryDTO countryDTO);
+    public Integer getCountOfCities(CountryDTO countryDTO);
+
+    public CityDTO getCityById(Integer cityId);
+
 }

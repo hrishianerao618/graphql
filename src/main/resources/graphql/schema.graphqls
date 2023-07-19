@@ -6,4 +6,5 @@ type Query{
     country(countryId : Int!) : Country!,
     films(pageNo : Int, size : Int) : [Film]!,
     actor(actorId : Int!): Actor
+    city(cityId : Int!) : City
 }

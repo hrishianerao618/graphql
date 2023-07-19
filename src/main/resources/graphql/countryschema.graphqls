@@ -3,4 +3,5 @@ type Country{
     country: String!
     lastUpdate : String!
     cities : [City]!
+    countCity : Int!
 }

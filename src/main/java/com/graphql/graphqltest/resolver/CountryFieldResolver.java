@@ -17,4 +17,8 @@ public class CountryFieldResolver implements GraphQLResolver<CountryDTO> {
     public List<CityDTO> getCities(CountryDTO countryDTO){
         return cityService.getAllCitiesByCountryId(countryDTO);
     }
+
+    public Integer getCountCity(CountryDTO countryDTO){
+        return cityService.getCountOfCities(countryDTO);
+    }
 }

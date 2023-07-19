@@ -26,4 +26,22 @@ public class CityServiceImpl implements CityService {
                 })
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public Integer getCountOfCities(CountryDTO countryDTO){
+        return cityRepository.findAllByCountryCountryId(countryDTO.getCountryId()).size();
+    }
+
+    @Override
+    public CityDTO getCityById(Integer cityId) {
+        City city = cityRepository.findById(cityId).get();
+        CityDTO cityDTO = new CityDTO();
+        cityDTO.setCity(city.getCity());
+        cityDTO.setLastUpdate(city.getLastUpdate());
+        cityDTO.setCityId(city.getCityId());
+        cityDTO.setCountry(city.getCountry().getCountryId());
+        return cityDTO;
+
+    }
+
 }

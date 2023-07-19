@@ -40,4 +40,20 @@ public class City {
     public City(){
 
     }
+
+    public void setCityId(Integer cityId) {
+        this.cityId = cityId;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setLastUpdate(String lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
 }

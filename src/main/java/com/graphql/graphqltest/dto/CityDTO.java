@@ -1,11 +1,13 @@
 package com.graphql.graphqltest.dto;
 
+import com.graphql.graphqltest.model.Country;
+
 public class CityDTO {
     private int cityId ;
     private String city;
     private String lastUpdate;
 
-    private CountryDTO country;
+    private Integer countryId;
 
     public CityDTO(int cityId, String city, String lastUpdate) {
         this.cityId = cityId;
@@ -37,11 +39,14 @@ public class CityDTO {
         this.lastUpdate = lastUpdate;
     }
 
-    public CountryDTO getCountry() {
-        return country;
+    public Integer getCountry() {
+        return countryId;
     }
 
-    public void setCountry(CountryDTO country) {
-        this.country = country;
+    public void setCountry(Integer countryId) {
+        this.countryId = countryId;
+    }
+
+    public CityDTO() {
     }
 }

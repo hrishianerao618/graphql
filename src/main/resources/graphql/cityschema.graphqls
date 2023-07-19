@@ -2,5 +2,5 @@ type City{
     cityId : Int!
     city: String!
     lastUpdate : String!
-    country: Country!
+    country: Country
 }
