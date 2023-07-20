@@ -2,12 +2,12 @@ type Actor{
     actorId : Int
     firstName : String!
     lastName : String
-    lastUpdate : String
+    lastUpdate : DateTime
 }
 
 
 input ActorInput{
     firstName : String!
     lastName : String
-    lastUpdate : String
+    lastUpdate : DateTime
 }

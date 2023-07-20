@@ -2,6 +2,7 @@ package com.graphql.graphqltest.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "actor")
@@ -11,7 +12,7 @@ public class Actor {
     private Integer actorId ;
     private String firstName ;
     private String lastName ;
-    private Timestamp lastUpdate ;
+    private OffsetDateTime lastUpdate ;
 
     public Actor() {
     }
@@ -32,11 +33,11 @@ public class Actor {
         this.lastName = lastName;
     }
 
-    public Timestamp getLastUpdate() {
+    public OffsetDateTime getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Timestamp lastUpdate) {
+    public void setLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 

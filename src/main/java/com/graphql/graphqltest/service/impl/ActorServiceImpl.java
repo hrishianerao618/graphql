@@ -26,8 +26,9 @@ public class ActorServiceImpl implements ActorService {
         actor.setLastName(actorDTO.getLastName());
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SS");
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        actor.setLastUpdate(timestamp);
+      //  Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+       // actor.setLastUpdate(timestamp);
+        actor.setLastUpdate(actorDTO.getLastUpdate());
         Actor actorModel = actorRepository.saveAndFlush(actor);
         System.out.print("Actor: "+actorModel.getActorId());
         return Stream.of(actor)
@@ -36,10 +37,10 @@ public class ActorServiceImpl implements ActorService {
                     d.setActorId(e.getActorId());
                     d.setFirstName(e.getFirstName());
                     d.setLastName(e.getLastName());
-                    Timestamp timestampRes = e.getLastUpdate();
+                    /*Timestamp timestampRes = e.getLastUpdate();
                     SimpleDateFormat dateFormatRes = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SS");
-                    String dateString = dateFormatRes.format(timestampRes);
-                    d.setLastUpdate(dateString);
+                    String dateString = dateFormatRes.format(timestampRes);*/
+                    d.setLastUpdate(e.getLastUpdate());
                     return d;
                 })
                 .findFirst()
@@ -56,10 +57,10 @@ public class ActorServiceImpl implements ActorService {
                     d.setActorId(e.getActorId());
                     d.setFirstName(e.getFirstName());
                     d.setLastName(e.getLastName());
-                    Timestamp timestamp = e.getLastUpdate();
+                   /* Timestamp timestamp = e.getLastUpdate();
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SS");
-                    String dateString = dateFormat.format(timestamp);
-                    d.setLastUpdate(dateString);
+                    String dateString = dateFormat.format(timestamp);*/
+                    d.setLastUpdate(e.getLastUpdate());
                     return d;
                 })
                 .findFirst()

@@ -16,4 +16,8 @@ FilmService filmService;
     public List<FilmDTO> getFilms(int pageNo, int size){
         return filmService.getALLFilms(pageNo, size);
     }
+
+    public List<FilmDTO> getFilmsByYear(String year){
+        return filmService.getFilmsByYear(year);
+    }
 }

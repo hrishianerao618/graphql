@@ -1,12 +1,13 @@
 package com.graphql.graphqltest.dto;
 
 import java.sql.Timestamp;
+import java.time.OffsetDateTime;
 
 public class ActorDTO {
     public Integer actorId;
     private String firstName ;
     private String lastName ;
-    private String lastUpdate ;
+    private OffsetDateTime lastUpdate ;
 
     public String getFirstName() {
         return firstName;
@@ -24,11 +25,11 @@ public class ActorDTO {
         this.lastName = lastName;
     }
 
-    public String getLastUpdate() {
+    public OffsetDateTime getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(String lastUpdate) {
+    public void setLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 

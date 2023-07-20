@@ -4,7 +4,7 @@ public class FilmDTO {
     private Integer filmId ;
     private String title;
     private String description ;
-    private String release_year ;
+    private String releaseYear ;
     private Integer language_id ;
     private Integer rental_duration ;
     private Double rental_rate ;
@@ -42,11 +42,11 @@ public class FilmDTO {
     }
 
     public String getRelease_year() {
-        return release_year;
+        return releaseYear;
     }
 
-    public void setRelease_year(String release_year) {
-        this.release_year = release_year;
+    public void setRelease_year(String releaseYear) {
+        this.releaseYear = releaseYear;
     }
 
     public Integer getLanguage_id() {

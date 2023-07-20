@@ -10,7 +10,7 @@ type Film{
     replacement_cost : Float!
     rating : String!
     last_update : String
-    special_features : String
+    special_features : SpecialLink
 }
 
 input FilmInput{

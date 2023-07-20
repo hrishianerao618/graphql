@@ -26,6 +26,7 @@ public class CustomExceptionHandler implements GraphQLErrorHandler {
                 return ex;
             }
         }
+
         return graphQLError;
     }
 }
