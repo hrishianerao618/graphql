@@ -3,9 +3,9 @@ package com.graphql.graphqltest.dto;
 import java.util.List;
 
 public class CountryDTO {
-    private int countryId ;
+    private int countryId;
     private String country;
-    private String lastUpdate ;
+    private String lastUpdate;
 
     private List<CityDTO> cities;
 

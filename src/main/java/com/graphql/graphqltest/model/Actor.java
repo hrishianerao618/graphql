@@ -8,11 +8,11 @@ import java.time.OffsetDateTime;
 @Table(name = "actor")
 public class Actor {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer actorId ;
-    private String firstName ;
-    private String lastName ;
-    private OffsetDateTime lastUpdate ;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer actorId;
+    private String firstName;
+    private String lastName;
+    private OffsetDateTime lastUpdate;
 
     public Actor() {
     }

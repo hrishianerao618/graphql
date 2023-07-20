@@ -9,19 +9,19 @@ import java.sql.Timestamp;
 @Table(name = "film")
 public class Film {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer filmId ;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer filmId;
     private String title;
-    private String description ;
-    private String releaseYear ;
-    private Integer language_id ;
-    private Integer rental_duration ;
-    private Double rental_rate ;
-    private Integer length ;
-    private Double replacement_cost ;
-    private String rating ;
-    private Timestamp last_update ;
-    private String special_features ;
+    private String description;
+    private String releaseYear;
+    private Integer language_id;
+    private Integer rental_duration;
+    private Double rental_rate;
+    private Integer length;
+    private Double replacement_cost;
+    private String rating;
+    private Timestamp last_update;
+    private String special_features;
 
     public Film() {
     }

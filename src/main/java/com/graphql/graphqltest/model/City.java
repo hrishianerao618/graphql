@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "CITY")
 public class City {
     @Id
-    private Integer cityId ;
+    private Integer cityId;
     private String city;
     private String lastUpdate;
 
@@ -37,7 +37,7 @@ public class City {
         this.country = country;
     }
 
-    public City(){
+    public City() {
 
     }
 

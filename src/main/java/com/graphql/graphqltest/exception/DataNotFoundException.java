@@ -2,9 +2,7 @@ package com.graphql.graphqltest.exception;
 
 import graphql.ErrorType;
 import graphql.GraphQLError;
-import graphql.GraphQLException;
 import graphql.language.SourceLocation;
-import graphql.servlet.GraphQLErrorHandler;
 
 import java.util.List;
 import java.util.Map;
@@ -12,11 +10,11 @@ import java.util.Map;
 public class DataNotFoundException extends RuntimeException implements GraphQLError {
 
     String errorMsg;
-    public DataNotFoundException(String errorMsg){
+
+    public DataNotFoundException(String errorMsg) {
         super(errorMsg);
         this.errorMsg = errorMsg;
     }
-
 
     @Override
     public List<SourceLocation> getLocations() {
@@ -45,7 +43,7 @@ public class DataNotFoundException extends RuntimeException implements GraphQLEr
 
     @Override
     public StackTraceElement[] getStackTrace() {
-      //  return super.getStackTrace(); //original
+        //  return super.getStackTrace(); //original
         return null;// to stop stacktrace from displaying to client
     }
 }

@@ -1,9 +1,7 @@
 package com.graphql.graphqltest.dto;
 
-import com.graphql.graphqltest.model.Country;
-
 public class CityDTO {
-    private int cityId ;
+    private int cityId;
     private String city;
     private String lastUpdate;
 

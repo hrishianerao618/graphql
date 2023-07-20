@@ -2,7 +2,7 @@ package com.graphql.graphqltest.exception.handler;
 
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
-import graphql.servlet.GraphQLErrorHandler;
+import graphql.kickstart.execution.error.GraphQLErrorHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,14 +19,13 @@ public class CustomExceptionHandler implements GraphQLErrorHandler {
     }
 
     private GraphQLError getError(GraphQLError graphQLError) {
-        if(graphQLError instanceof ExceptionWhileDataFetching){//ExceptionWhileDataFetching is customer exception available in graphql handler
+        if (graphQLError instanceof ExceptionWhileDataFetching) {//ExceptionWhileDataFetching is customer exception available in graphql handler
             ExceptionWhileDataFetching ex = (ExceptionWhileDataFetching) graphQLError;
 
-            if(ex.getException() instanceof  GraphQLError){
+            if (ex.getException() instanceof GraphQLError) {
                 return ex;
             }
         }
-
         return graphQLError;
     }
 }

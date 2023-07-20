@@ -2,12 +2,10 @@ package com.graphql.graphqltest.resolver;
 
 import com.graphql.graphqltest.dto.ActorDTO;
 import com.graphql.graphqltest.dto.CategoryDTO;
-import com.graphql.graphqltest.dto.CityDTO;
 import com.graphql.graphqltest.dto.CountryDTO;
-import com.graphql.graphqltest.model.Country;
 import com.graphql.graphqltest.service.ActorService;
-import com.graphql.graphqltest.service.CityService;
 import com.graphql.graphqltest.service.CountryService;
+import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class GraphQLResolver<C> implements com.coxautodev.graphql.tools.GraphQLQueryResolver {
+public class GraphQLResolver<C> implements GraphQLQueryResolver {
     @Autowired
     CountryService countryService;
 

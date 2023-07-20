@@ -1,8 +1,8 @@
 package com.graphql.graphqltest.resolver;
 
-import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.graphql.graphqltest.dto.FilmDTO;
 import com.graphql.graphqltest.service.FilmService;
+import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

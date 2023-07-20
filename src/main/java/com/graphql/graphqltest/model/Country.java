@@ -10,13 +10,13 @@ import java.util.List;
 @Table(name = "COUNTRY", schema = "PUBLIC")
 public class Country {
     @Id
-    private Integer countryId ;
+    private Integer countryId;
     private String country;
-    private String lastUpdate ;
+    private String lastUpdate;
     @OneToMany(mappedBy = "country")
     private List<City> cities;
 
-    public Country(){
+    public Country() {
 
     }
 

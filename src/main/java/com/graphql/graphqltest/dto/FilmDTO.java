@@ -1,18 +1,18 @@
 package com.graphql.graphqltest.dto;
 
 public class FilmDTO {
-    private Integer filmId ;
+    private Integer filmId;
     private String title;
-    private String description ;
-    private String releaseYear ;
-    private Integer language_id ;
-    private Integer rental_duration ;
-    private Double rental_rate ;
-    private Integer length ;
-    private Double replacement_cost ;
-    private String rating ;
-    private String last_update ;
-    private String special_features ;
+    private String description;
+    private String releaseYear;
+    private Integer language_id;
+    private Integer rental_duration;
+    private Double rental_rate;
+    private Integer length;
+    private Double replacement_cost;
+    private String rating;
+    private String last_update;
+    private String special_features;
 
     public FilmDTO() {
     }

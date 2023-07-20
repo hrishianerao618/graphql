@@ -6,21 +6,17 @@ import graphql.schema.GraphQLScalarType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
-
 @Configuration
-public class ScalarResolverConfig  {
+public class ScalarResolverConfig {
 
+    @Bean
+    public GraphQLScalarType DateTime() {
+        return ExtendedScalars.DateTime;
+    }
 
-@Bean
-    public GraphQLScalarType DateTime(){
-    return ExtendedScalars.DateTime;
- }
-
- @Bean
- public GraphQLScalarType SpecialLink(){
-    return ExtendedScalars.newAliasedScalar("SpecialLink").aliasedScalar(Scalars.GraphQLString).build();
- }
-
+    @Bean
+    public GraphQLScalarType SpecialLink() {
+        return ExtendedScalars.newAliasedScalar("SpecialLink").aliasedScalar(Scalars.GraphQLString).build();
+    }
 
 }

@@ -1,13 +1,12 @@
 package com.graphql.graphqltest.dto;
 
-import java.sql.Timestamp;
 import java.time.OffsetDateTime;
 
 public class ActorDTO {
     public Integer actorId;
-    private String firstName ;
-    private String lastName ;
-    private OffsetDateTime lastUpdate ;
+    private String firstName;
+    private String lastName;
+    private OffsetDateTime lastUpdate;
 
     public String getFirstName() {
         return firstName;
