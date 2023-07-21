@@ -7,5 +7,5 @@ type Query{
     films(pageNo : Int, size : Int) : [Film]!,
     actor(actorId : Int!): Actor
     city(cityId : Int!) : City,
-    filmsByYear(release_year : year @NotBlank(message: "directive.notblank.message")) : [Film]
+    filmsByYear(release_year : year) : [Film]
 }
