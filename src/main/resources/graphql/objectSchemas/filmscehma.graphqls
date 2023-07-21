@@ -1,6 +1,6 @@
 type Film{
     filmId : Int!
-    title: String!
+    title: String! @uppercase
     description : String
     release_year : String!
     language_id : Int!

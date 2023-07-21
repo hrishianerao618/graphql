@@ -1,1 +1,3 @@
 directive @NotBlank(message: String!) on ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION
+
+directive @uppercase on FIELD | FIELD_DEFINITION
