@@ -1,87 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-    <groupId>com.graphql</groupId>
-    <artifactId>graphqltest</artifactId>
+
+    <groupId>com.social</groupId>
+    <artifactId>your-project-name</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>graphqltest</name>
-    <description>Graphql Spring Boot</description>
+
     <properties>
-        <java.version>8</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <graphql.spring.boot.version>11.1.0</graphql.spring.boot.version>
     </properties>
+
     <dependencies>
+        <!-- Spring Boot dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.4.6</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>2.4.6</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webflux</artifactId>
-            <scope>test</scope>
+            <version>2.4.6</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.projectreactor/reactor-core -->
+        <!-- GraphQL dependencies -->
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>${graphql.spring.boot.version}</version>
+        </dependency>
+        <!-- Add other GraphQL dependencies here -->
+
+        <!-- Other dependencies -->
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-core</artifactId>
-            <version>3.4.15</version>
+            <version>3.4.6</version> <!-- Update to the latest version -->
+        </dependency>
+        <!-- Add other dependencies here -->
+        <!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java-extended-validation -->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-extended-validation</artifactId>
+            <version>16.0.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java-extended-scalars -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-extended-scalars</artifactId>
-            <version>18.3</version>
+            <version>1.0.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.graphql-java-kickstart/graphql-spring-boot-starter -->
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.graphql-java-kickstart/graphiql-spring-boot-starter -->
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
-            <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>11.1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.graphql-java</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
-            <version>5.0.2</version>
+            <version>${graphql.spring.boot.version}</version>
         </dependency>
-
 
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Boot and GraphQL dependency management -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.4.6</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Update to the latest version -->
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.6</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

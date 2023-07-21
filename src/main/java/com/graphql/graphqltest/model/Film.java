@@ -1,6 +1,5 @@
 package com.graphql.graphqltest.model;
 
-import lombok.Generated;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

@@ -1,11 +1,11 @@
 type Query{
     firstGraphQuery : String!
-    secondGraphQuery(firstParam : String!, secondParam : String): String!
+    secondGraphQuery(firstParam : String! @NotBlank(message: "directive.notblank.message"), secondParam : String): String!
     category : Category
     sampleArr : [Int!]!
     country(countryId : Int!) : Country!,
     films(pageNo : Int, size : Int) : [Film]!,
     actor(actorId : Int!): Actor
     city(cityId : Int!) : City,
-    filmsByYear(release_year : year) : [Film]
+    filmsByYear(release_year : year @NotBlank(message: "directive.notblank.message")) : [Film]
 }
